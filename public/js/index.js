@@ -127,4 +127,17 @@ $(function(){
     $(".newHot-product-detaile-list").on("mouseleave",function(){
         $(this).children("p").slideUp();
     });
+   //功能介绍
+    $(".coupon-redemption-rebate").on("mouseenter",function(){
+        $(this).css("background","#DA2F25");
+        $(this).children("div").css({"border-bottom":"1px solid #fff"});
+        $(this).children().children("span").css({"color":"#fff"});
+        $(this).children("p").css({"color":"#fff"});
+    });
+    $(".coupon-redemption-rebate").on("mouseleave",function(){
+        $(this).css("background","#fff");
+        $(this).children("div").css({"border-bottom":"1px solid #ccc"});
+        $(this).children().children("span").css({"color":"#333"});
+        $(this).children("p").css({"color":"#666"});
+    });
 })
