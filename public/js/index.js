@@ -140,4 +140,42 @@ $(function(){
         $(this).children().children("span").css({"color":"#333"});
         $(this).children("p").css({"color":"#666"});
     });
+    //四个区块图片变化的函数
+    function mouseenter(obj,img,ele,imgURL){
+        obj.children().children("img").attr("src",img);
+        ele.attr("src",imgURL);
+    }
+    function mouseleave(obj,img,ele,imgURL){
+        obj.children().children("img").attr("src",img);
+        ele.attr("src",imgURL);
+    }
+    //领券返利
+    $(".coupon-redemption-rebate-coupon").on("mouseenter",function(){
+        mouseenter($(this),"img/icon_ticket_hover.png",$(".APP-ticket"),"img/APP_ticket__hover_UI.png");
+    });
+    $(".coupon-redemption-rebate-coupon").on("mouseleave",function(){
+        mouseleave($(this),"img/icon_ticket_default.png",$(".APP-ticket"),"img/APP_ticket__hover_UI.png")
+    });
+    //图片搜索
+    $(".coupon-redemption-rebate-search").on("mouseenter",function(){
+        mouseenter($(this),"img/icon_ticket_hover copy.png",$(".APP-ticket"),"img/APP_search__hover_UI.png");
+    });
+    $(".coupon-redemption-rebate-search").on("mouseleave",function(){
+        mouseleave($(this),"img/icon_search_default.png",$(".APP-ticket"),"img/APP_ticket__hover_UI.png")
+    });
+    //社区
+    $(".coupon-redemption-rebate-community").on("mouseenter",function(){
+        mouseenter($(this),"img/icon_community_hover.png",$(".APP-ticket"),"img/APP_community__hover_UI.png");
+    });
+    $(".coupon-redemption-rebate-community").on("mouseleave",function(){
+        mouseleave($(this),"img/icon_community_default.png",$(".APP-ticket"),"img/APP_ticket__hover_UI.png")
+    });
+    // 一份美好事业图片
+    $(".coupon-redemption-rebate-career").on("mouseenter",function(){
+        mouseenter($(this),"img/icon_career_hover.png",$(".APP-ticket"),"img/APP_career_hover_UI .png");
+    });
+    $(".coupon-redemption-rebate-career").on("mouseleave",function(){
+        mouseleave($(this),"img/icon_career_default.png",$(".APP-ticket"),"img/APP_ticket__hover_UI.png")
+    });
+
 })

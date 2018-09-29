@@ -118,6 +118,7 @@ a:hover, a:visited, a:link, a:active {
     color:#333;
     font-size:36px;
     font-family: PingFangSC-Regular;
+    letter-spacing: 1px;
 }
 .newHot-product-detaile{
     margin-bottom:100px;
@@ -263,6 +264,7 @@ a:hover, a:visited, a:link, a:active {
     color:#333;
     font-size:36px;
     font-family: PingFangSC-Regular;
+    letter-spacing: 1px;
 }
 .coupon-redemption-rebate{
     box-shadow:0px 0px 8px 0px rgba(0,0,0,0.08);
@@ -303,4 +305,74 @@ a:hover, a:visited, a:link, a:active {
     position: absolute;
     top:3%;
     left:7%;
+}
+/*开店介绍*/
+.open-shop-introduced{
+    box-shadow:0 0 8px 0 rgba(0,0,0,0.08);
+    border-radius:8px;
+    padding:50px 0 42px 0;
+    text-align:center;
+}
+.open-shop-introduced-title{
+    color:#333;
+    font-size:36px;
+    margin-bottom:32px;
+    font-family:PingFangSC-Regular;
+    letter-spacing: 1px;
+}
+.open-shop-introduced-txt{
+    color:#333;
+    font-size:20px;
+    line-height: 36px;
+    font-family:PingFangSC-Regular;
+}
+.apply-open-shop-title{
+    text-align:center;
+    color:#333;
+    font-size:28px;
+    margin-top:64px;
+    margin-bottom:32px;
+    letter-spacing: 1px;
+}
+.apply-open-shop-process{
+    box-shadow:0px 0px 8px 0px rgba(0,0,0,0.08);
+    border-radius:8px;
+    text-align:center;
+}
+.apply-open-shop-process-title{
+    height:60px;
+    /*line-height: 60px;*/
+    border-bottom:1px solid #ccc;
+    border-radius: 8px 8px 0 0;
+}
+.apply-open-shop-process-title-num{
+    display:inline-block;
+    color:#333;
+    width:36px;
+    height:36px;
+    border-radius: 50%;
+    border:1px solid #333;
+    line-height:36px;
+    text-align:center;
+    margin-top:6%;
+}
+.apply-open-shop-process-detaile{
+    height:64px;
+    line-height: 64px;
+    color:#666;
+    font-size:14px;
+    letter-spacing: 1px;
+}
+.apply-open-shop-process-first{
+    width:65%;
+    margin:0 auto;
+}
+/*开店礼包*/
+.openShop-gift-txt{
+    color:#333;
+    font-size:28px;
+    font-family: PingFangSC-Regular;
+    letter-spacing: 1px;
+    text-align:center;
+    margin-bottom:32px;
 }
