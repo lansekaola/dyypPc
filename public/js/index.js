@@ -36,7 +36,7 @@ $(function(){
     var html=``;
     for(var i=0;i<productList.length;i++){
         // console.log(productList[i])
-        html+=` <div class="col-md-3">
+        html+=` <div class="col-md-3 col-xs-12 col-sm-12">
                 <div class="newHot-product-detaile-list">
                     <!--商品图片-->
                     <div class="row">
@@ -153,29 +153,91 @@ $(function(){
     $(".coupon-redemption-rebate-coupon").on("mouseenter",function(){
         mouseenter($(this),"img/icon_ticket_hover.png",$(".APP-ticket"),"img/APP_ticket__hover_UI.png");
     });
-    $(".coupon-redemption-rebate-coupon").on("mouseleave",function(){
-        mouseleave($(this),"img/icon_ticket_default.png",$(".APP-ticket"),"img/APP_ticket__hover_UI.png")
-    });
+    // $(".coupon-redemption-rebate-coupon").on("mouseleave",function(){
+    //     mouseleave($(this),"img/icon_ticket_default.png",$(".APP-ticket"),"img/APP_ticket__hover_UI.png")
+    // });
     //图片搜索
     $(".coupon-redemption-rebate-search").on("mouseenter",function(){
         mouseenter($(this),"img/icon_ticket_hover copy.png",$(".APP-ticket"),"img/APP_search__hover_UI.png");
     });
-    $(".coupon-redemption-rebate-search").on("mouseleave",function(){
-        mouseleave($(this),"img/icon_search_default.png",$(".APP-ticket"),"img/APP_ticket__hover_UI.png")
-    });
+    // $(".coupon-redemption-rebate-search").on("mouseleave",function(){
+    //     mouseleave($(this),"img/icon_search_default.png",$(".APP-ticket"),"img/APP_ticket__hover_UI.png")
+    // });
     //社区
     $(".coupon-redemption-rebate-community").on("mouseenter",function(){
         mouseenter($(this),"img/icon_community_hover.png",$(".APP-ticket"),"img/APP_community__hover_UI.png");
     });
-    $(".coupon-redemption-rebate-community").on("mouseleave",function(){
-        mouseleave($(this),"img/icon_community_default.png",$(".APP-ticket"),"img/APP_ticket__hover_UI.png")
-    });
+    // $(".coupon-redemption-rebate-community").on("mouseleave",function(){
+    //     mouseleave($(this),"img/icon_community_default.png",$(".APP-ticket"),"img/APP_ticket__hover_UI.png")
+    // });
     // 一份美好事业图片
     $(".coupon-redemption-rebate-career").on("mouseenter",function(){
         mouseenter($(this),"img/icon_career_hover.png",$(".APP-ticket"),"img/APP_career_hover_UI .png");
     });
-    $(".coupon-redemption-rebate-career").on("mouseleave",function(){
-        mouseleave($(this),"img/icon_career_default.png",$(".APP-ticket"),"img/APP_ticket__hover_UI.png")
+    // $(".coupon-redemption-rebate-career").on("mouseleave",function(){
+    //     mouseleave($(this),"img/icon_career_default.png",$(".APP-ticket"),"img/APP_ticket__hover_UI.png")
+    // });
+   // 申请开店鼠标移过变化
+    $(".apply-open-shop-process").on("mouseenter",function(){
+        $(this).css({"background":"#da2f25"});
+        $(this).children().children("span").css({"border":"1px solid #fff","color":"#fff"});
+        $(this).children("div").css({"border-bottom":"1px solid #fff"});
+        $(this).children("p").css({"color":"#fff"});
+        $(this).parent().next().children("div").children("img").attr("src","img/icon_arrow_hover.png");
+    });
+    $(".apply-open-shop-process").on("mouseleave",function(){
+        $(this).css({"background":"#fff"});
+        $(this).children().children("span").css({"border":"1px solid #333","color":"#333"});
+        $(this).children("div").css({"border-bottom":"1px solid #ccc"});
+        $(this).children("p").css({"color":"#666"});
+        $(this).parent().next().children("img").attr("src","img/icon_arrow_default.png");
+        $(this).parent().next().children("div").children("img").attr("src","img/icon_arrow_default.png");
     });
 
+   //开店礼包商品
+    var str=``;
+    for(var j=0;j<newProductList.length;j++){
+        <!--列表1-->
+        str+=`
+            <div class="col-md-3">
+                <div class="openShop-gift-product-list" data-product="${newProductList[j].productId}">
+                    <!--商品名称-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img class="img-responsive" src="${newProductList[j].productImage}" alt="">
+                        </div>
+                    </div>
+                    <!--商品名称-->
+                    <div class="row">
+                        <div class="col-md-12">
+                           <div class="openShop-gift-product-name">
+                               ${newProductList[j].productName}
+                           </div>
+                        </div>
+                    </div>
+                    <!--价格-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="openShop-gift-product-price">
+                                ￥${newProductList[j].price}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`
+    }
+    $(".gift-product-container").html(str);
+   // 开店权益鼠标滑过效果
+   $(".user-auto-detaile").on("mouseenter",function(){
+       $(this).css({"background":"#da2f25"});
+       $(this).children("p").css({"border-bottom":"1px solid #fff","color":"#fff"});
+       $(this).children("div").children("p").css({"color":"#fff"});
+       $(this).children("div").children("div").css({"color":"#fff"});
+   });
+    $(".user-auto-detaile").on("mouseleave",function(){
+        $(this).css({"background":"#fff"});
+        $(this).children("p").css({"border-bottom":"1px solid #ccc","color":"#333"});
+        $(this).children("div").children("p").css({"color":"#333"});
+        $(this).children("div").children("div").css({"color":"#666"});
+    });
 })

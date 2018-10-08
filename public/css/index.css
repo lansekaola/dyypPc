@@ -335,7 +335,7 @@ a:hover, a:visited, a:link, a:active {
     letter-spacing: 1px;
 }
 .apply-open-shop-process{
-    box-shadow:0px 0px 8px 0px rgba(0,0,0,0.08);
+    box-shadow:0 0 8px 0 rgba(0,0,0,0.08);
     border-radius:8px;
     text-align:center;
 }
@@ -365,14 +365,156 @@ a:hover, a:visited, a:link, a:active {
 }
 .apply-open-shop-process-first{
     width:65%;
-    margin:0 auto;
+}
+.openShop-process{
+    position: relative;
+    margin-bottom:64px;
+}
+.openShop-process :after{
+    content: "";
+    display:block;
+    clear:both;
+}
+.apply-open-shop-process{
+    position: relative;
+}
+.apply-open-shop-process-jiantou{
+    width:100%;
+    position: relative;
+    top:44px;
+}
+.apply-open-shop-process-two{
+    left:-37%;
+}
+.apply-open-shop-process-three{
+    left:-16%;
+}
+.apply-open-shop-process-jiantou-two{
+    left:-38%;
+}
+.apply-open-shop-process-jiantou-three{
+    left:9%;
+}
+.apply-open-shop-process-jiantou-one{
+    left:-97%;
 }
 /*开店礼包*/
-.openShop-gift-txt{
+.openShop-gift-txt,.user-auth-txt{
     color:#333;
     font-size:28px;
     font-family: PingFangSC-Regular;
     letter-spacing: 1px;
     text-align:center;
     margin-bottom:32px;
+}
+.user-auth-txt{
+    margin-top:64px;
+}
+.openShop-gift-product-list{
+    width:75%;
+    margin: 0 auto;
+    box-shadow:0 0 8px 0 rgba(0,0,0,0.08);
+    border-radius:8px;
+}
+.openShop-gift-product-name{
+    margin:12px auto 14px auto;
+    width:94%;
+    text-align:center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color:#333;
+    font-size:14px;
+    line-height: 20px;
+    font-family: PingFangSC-Regular;
+}
+.openShop-gift-product-price{
+    width:94%;
+    margin:0 auto 18px auto;
+    color:#da2525;
+    font-size:20px;
+    font-family: PingFangSC-Medium;
+}
+/*用户权益说明*/
+.user-auto-detaile{
+    text-align:center;
+    box-shadow:0 0 8px 0 rgba(0,0,0,0.08);
+    border-radius:8px;
+    width:80%;
+    margin:0 auto;
+}
+.user-auto-detaile-title{
+    height:60px;
+    line-height: 60px;
+    border-bottom:1px solid #ccc;
+    color:#333;
+    font-size:24px;
+    font-family: PingFangSC-Regular;
+}
+.user-auto-detaile-txt{
+    height:180px;
+}
+.user-auto-detaile-txt p{
+    color:#333;
+    font-size:20px;
+    font-family: PingFangSC-Regular;
+    margin:30px 0 25px 0;
+    letter-spacing: 1px;
+}
+.user-auto-detaile-txt div{
+    color:#666;
+    font-size:14px;
+    font-family: PingFangSC-Regular;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+#companyIntroduce{
+    margin-top:100px;
+    width:100%;
+}
+/*联系我们*/
+#contactUs{
+    width:100%;
+}
+.dyyp-contactUs{
+    width:60%;
+    margin:0 auto 66px auto;
+    box-shadow:0 0 12px 0 rgba(0,0,0,0.12);
+    border-radius:8px;
+    height:268px;
+    text-align: center;
+    position: relative;
+    top:-134px;
+    background: #fff;
+}
+.dyyp-contactUs-title{
+    color:#333;
+    font-size:36px;
+    font-family:PingFangSC-Regular;
+    padding:40px 0 20px 0;
+}
+.dyyp-contactUs-detaile p{
+    color:#333;
+    font-size:20px;
+    font-family:PingFangSC-Regular;
+}
+/*底部水印*/
+#dyyp-bottom-icon{
+    width:100%;
+    height:80px;
+    line-height: 80px;
+    text-align: center;
+    background:#414141;
+    color:#fff;
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+}
+/*侧边二维码*/
+.downLoad-app-QC{
+    position: fixed;
+    top:677px;
+    right:13%;
+    z-index: 2;
 }
