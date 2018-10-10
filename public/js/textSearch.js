@@ -1,0 +1,26 @@
+$(function(){
+    //清除上页的文字搜索内容
+    $(".clear-txt-mark").on("click",function(){
+        $(this).parent().remove();
+        $(".txt-search").attr("placeholder","查找全网商品");
+    });
+    //相机变化
+    $(".photo-container").on("mouseenter",function(){
+        $(this).children("img").attr("src","img/icon_upload_hover.png");
+    });
+    $(".photo-container").on("mouseleave",function(){
+        $(this).children("img").attr("src","img/icon_upload_default.png");
+    });
+    //搜索分类的点击事件样式变化，以及请求数据（后续请求）
+    $(".resultCategory-item").on("click",function(){
+        $(this).addClass("active").parent().siblings().children(".active").removeClass("active");
+    })
+    //搜索数据
+    $(".newHot-product-detaile-list").on("mouseenter",function(){
+        $(this).children("p").slideDown();
+    });
+    $(".newHot-product-detaile-list").on("mouseleave",function(){
+        $(this).children("p").slideUp();
+    });
+
+})

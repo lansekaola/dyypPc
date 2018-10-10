@@ -240,4 +240,20 @@ $(function(){
         $(this).children("div").children("p").css({"color":"#333"});
         $(this).children("div").children("div").css({"color":"#666"});
     });
+    //接收文字搜索和图片搜索页面tab返回的标志跳转到相应页面
+    var tag=GetQueryString("tag");
+    function scroll(ele) {
+        $('html,body').animate({scrollTop:ele.offset().top}, 1000);
+    }
+    if(tag=="homePage"){
+        scroll($('#homePage'));
+    }else if(tag=="functionIntroduce"){
+        scroll($('#functionIntroduce'));
+    }else if(tag=="openShop"){
+        scroll($('#openShop'));
+    }else if(tag=="companyIntroduce"){
+        scroll($('#companyIntroduce'));
+    }else if(tag=="contactUs"){
+        scroll($('#contactUs'));
+    }
 })
