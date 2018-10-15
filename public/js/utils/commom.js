@@ -8,3 +8,15 @@ function GetQueryString(name) {
     if(r != null) return decodeURI(r[2]);
     return null;
 }
+//  加载中显示动画
+function spinnerShow(){
+    Spinner({ color: '#cacaca',length:9,lines:15,radius:17,width:4}).spin(document.getElementById('targetr'));
+}
+//隐藏加载项
+function spinnerHide(){
+    $(".wenzi").html("已经到底了！！！");
+    $("#targetr").hide();
+    setTimeout(function () {
+        $(".donghua").slideUp()
+    },500)
+}

@@ -20,7 +20,7 @@ $(function(){
         $(this).children("b").css({"color":"#da2f25"});
     });
     $(".clear-picture-bg").on("mouseleave",function(){
-        $(this).css({"border":"1px solid #ccc"});
+        $(this).css({"border":"1px solid #ccc","background":"#fff"});
         $(this).children("b").css({"color":"#ccc"});
     });
     //相机变化
@@ -33,13 +33,13 @@ $(function(){
     //搜索分类的点击事件样式变化，以及请求数据（后续请求）
     $(".resultCategory-container-item").on("click",function(){
         $(this).addClass("active").siblings(".active").removeClass("active");
-    })
+    });
     //搜索数据
     $(".newHot-product-detaile-list").on("mouseenter",function(){
-        $(this).children("p").slideDown();
+        $(this).children("p").show();
     });
     $(".newHot-product-detaile-list").on("mouseleave",function(){
-        $(this).children("p").slideUp();
+        $(this).children("p").hide();
     });
 
 })

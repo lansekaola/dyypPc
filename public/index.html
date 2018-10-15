@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <!--没有配置域名，当以绝对路径访问项目时，不能正常引入favicon.ico-->
+    <link href="img/favicon.ico" mce_href="favicon.ico" rel="icon" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,35 +47,62 @@
     <![endif]-->
 </head>
 <body>
-    <!--1头部导航-->
-    <div class="container-title">
-        <div class="container">
-            <div class="row nav-title">
-                <div class="col-md-3">
-                    <img src="img/logo.png" alt="" class="img-responsive title-icon"/>
-                </div>
-                <div class="col-md-1 col-md-offset-4" style="text-align:center">
-                    <a href="#homePage" class="click">首页</a>
-                </div>
-                <div class="col-md-1">
-                    <a href="#functionIntroduce">功能介绍</a>
-                </div>
-                <div class="col-md-1">
-                    <a href="#openShop">开店介绍</a>
-                </div>
-                <div class="col-md-1">
-                    <a href="#companyIntroduce">公司介绍</a>
-                </div>
-                <div class="col-md-1">
-                    <a href="#contactUs">联系我们</a>
-                </div>
-            </div>
+<!--1头部导航-->
+<div class="navbar navbar-default navbar-fixed-top" style="height:80px;background:#fff">
+    <div class="container">
+        <!--针对移动端-->
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed"data-toggle="collapse"data-target="#mynavbars">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--品牌图标-->
+            <a href="#"class="navbar-brand" style="padding:5px 0 0 0px;">
+                <img src="img/logo.png" alt="" style="vertical-align: top"/>
+            </a>
+        </div>
+        <!--针对桌面端的信息，1下拉菜单2搜索的表单3两个按钮-->
+        <div id="mynavbars" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#homePage" class="navbar-text click" >首页</a></li>
+                <li><a href="#functionIntroduce"  class="navbar-text">功能介绍</a></li>
+                <li><a href="#openShop" class="navbar-text">开店介绍</a></li>
+                <li><a href="#companyIntroduce" class="navbar-text">公司介绍</a></li>
+                <li><a href="#contactUs" class="navbar-text">联系我们</a></li>
+            </ul>
         </div>
     </div>
+</div>
+    <!--1头部导航-->
+    <!--<div class="container-title">-->
+        <!--<div class="container">-->
+            <!--<div class="row nav-title">-->
+                <!--<div class="col-md-3">-->
+                    <!--<img src="img/logo.png" alt="" class="img-responsive title-icon"/>-->
+                <!--</div>-->
+                <!--<div class="col-md-1 col-md-offset-4" style="text-align:center">-->
+                    <!--<a href="#homePage" class="click">首页</a>-->
+                <!--</div>-->
+                <!--<div class="col-md-1">-->
+                    <!--<a href="#functionIntroduce">功能介绍</a>-->
+                <!--</div>-->
+                <!--<div class="col-md-1">-->
+                    <!--<a href="#openShop">开店介绍</a>-->
+                <!--</div>-->
+                <!--<div class="col-md-1">-->
+                    <!--<a href="#companyIntroduce">公司介绍</a>-->
+                <!--</div>-->
+                <!--<div class="col-md-1">-->
+                    <!--<a href="#contactUs">联系我们</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
     <!--2banner-->
     <div class="container-fluid">
-        <div class="row">
-            <div class="clo-md-12 homePage" id="homePage">
+        <div class="row" style="background:#da2f25; text-align: center">
+            <div class="clo-md-12 homePage" id="homePage" style="display: inline-block ;">
                 <img src="img/banner.png" alt="" class="img-responsive"/>
                 <img src="img/QW.png" alt="" class="img-responsive qrCode"/>
                 <img src="img/iOS.png" alt="" class="img-responsive iosDownload"/>

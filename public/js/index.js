@@ -1,6 +1,8 @@
 $(function(){
     //标题头替换颜色
-    $(".nav-title a").on("click",function(){
+    console.log($("#mynavbars a"))
+    $("#mynavbars a").on("click",function(){
+        console.log($(this).parent().siblings().children())
         $(this).addClass("click").parent().siblings().children(".click").removeClass("click");
     });
    // ios,android  hover变化
@@ -122,10 +124,10 @@ $(function(){
     }
     $(".newHot-product-detaile").html(html);
     $(".newHot-product-detaile-list").on("mouseenter",function(){
-        $(this).children("p").slideDown();
+        $(this).children("p").show();
     });
     $(".newHot-product-detaile-list").on("mouseleave",function(){
-        $(this).children("p").slideUp();
+        $(this).children("p").hide();
     });
    //功能介绍
     $(".coupon-redemption-rebate").on("mouseenter",function(){
@@ -239,6 +241,15 @@ $(function(){
         $(this).children("p").css({"border-bottom":"1px solid #ccc","color":"#333"});
         $(this).children("div").children("p").css({"color":"#333"});
         $(this).children("div").children("div").css({"color":"#666"});
+    });
+    // 文字搜索
+    $(".txt-search-btn").on("click",function(){
+        var val=$(".txt-search").val();
+        if(val!=""){
+            location.href="textSearch.html?val="+val;
+        }else{
+            alert("请您填写搜索词")
+        }
     });
     //接收文字搜索和图片搜索页面tab返回的标志跳转到相应页面
     var tag=GetQueryString("tag");

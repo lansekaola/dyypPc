@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <!--没有配置域名，当以绝对路径访问项目时，不能正常引入favicon.ico-->
+    <link href="img/favicon.ico" mce_href="favicon.ico" rel="icon" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -62,7 +64,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!--品牌图标-->
-                <a href="#"class="navbar-brand" style="padding-top:10px">
+                <a href="#"class="navbar-brand" style="padding:5px 0 0 0px;">
                     <img src="img/whiteLogo.png" alt="" style="vertical-align: top"/>
                 </a>
             </div>
@@ -99,8 +101,8 @@
                     <!--文字搜索框-->
                     <div class="col-md-9 clear-box">
                         <input type="search" name="search" class="txt-search txt-search-result" placeholder="" />
-                        <div class="clear-txt-bg">
-                            <span class="clear-txt">索尼耳机</span>
+                        <div class="clear-txt-bg" style="display: none">
+                            <span class="clear-txt"></span>
                             <b class="clear-txt-mark">×</b>
                         </div>
                     </div>
@@ -116,515 +118,524 @@
         </div>
         <!--3.2最新推荐文字-->
         <div class="row resultCategory">
-            <div class="col-md-1 resultCategory-column"><span class="resultCategory-item active">综合</span></div>
-            <div class="col-md-1 resultCategory-column"><span class="resultCategory-item">优惠券</span></div>
-            <div class="col-md-1 resultCategory-column"><span class="resultCategory-item">返利</span></div>
+            <div class="col-md-1 resultCategory-column"><span class="resultCategory-item active" data-type="0" data-sortId="0">综合</span></div>
+            <div class="col-md-1 resultCategory-column"><span class="resultCategory-item" data-type="2" data-sortId="0">优惠券</span></div>
+            <div class="col-md-1 resultCategory-column"><span class="resultCategory-item" data-type="1" data-sortId="0">返利</span></div>
         </div>
         <!--3.3最新推荐商品-->
         <div class="row newHot-product-detaile">
             <!--列表1-->
-            <div class="col-md-3">
-                <div class="newHot-product-detaile-list">
-                    <!--商品图片-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img src="http://img.alicdn.com/tfscom/i3/2452496434/TB1wxDxd29TBuNjy0FcXXbeiFXa_!!2-item_pic.png_240x240.jpg" alt="" class="img-responsive newHot-product-detaile-list-img" />
-                        </div>
-                    </div>
-                    <!--商品名称-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="newHot-product-detaile-list-name">
-                                索尼的的肯定是看看速度时代开始的开始的赛德克赛德克四度空间
-                            </div>
-                        </div>
-                    </div>
-                    <!--原价 券标志-->
-                    <div class="row">
-                        <!--原价-->
-                        <div class="col-md-7">
-                            <div class="newHot-product-detaile-list-price">
-                                <span class="newHot-product-detaile-list-price-txt">原价<s>￥999.00</s></span>
-                            </div>
-                        </div>
-                        <!--券标志-->
-                        <div class="col-md-5">
-                            <!--券显示-->
-                            <!--<div class="newHot-product-detaile-list-tag">-->
-                                <!--<img src="img/icon_ticket.png" class="img-responsive" alt="">-->
-                                <!--<span class="newHot-product-detaile-list-tag-txt">券￥10</span>-->
+            <!--<div class="col-md-3">-->
+                <!--<div class="newHot-product-detaile-list">-->
+                    <!--&lt;!&ndash;商品图片&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-12">-->
+                            <!--<img src="http://img.alicdn.com/tfscom/i3/2452496434/TB1wxDxd29TBuNjy0FcXXbeiFXa_!!2-item_pic.png_240x240.jpg" alt="" class="img-responsive newHot-product-detaile-list-img" />-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;商品名称&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-12">-->
+                            <!--<div class="newHot-product-detaile-list-name">-->
+                                <!--索尼的的肯定是看看速度时代开始的开始的赛德克赛德克四度空间-->
                             <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;原价 券标志&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--&lt;!&ndash;原价&ndash;&gt;-->
+                        <!--<div class="col-md-7">-->
+                            <!--<div class="newHot-product-detaile-list-price">-->
+                                <!--<span class="newHot-product-detaile-list-price-txt">原价<s>￥999.00</s></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash;券标志&ndash;&gt;-->
+                        <!--<div class="col-md-5">-->
+                            <!--&lt;!&ndash;券显示&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="newHot-product-detaile-list-tag">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<img src="img/icon_ticket.png" class="img-responsive" alt="">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="newHot-product-detaile-list-tag-txt">券￥10</span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
 
-                            <!--返显示-->
-                            <div class="newHot-product-detaile-list-tag newHot-product-detaile-list-tag-fan">
-                                返￥100
-                            </div>
-                        </div>
-                    </div>
-                    <!--券后价 购买按钮-->
-                    <div class="row newHot-product-detaile-list-nowPrice-container">
-                        <div class="col-md-7">
-                            <div class="newHot-product-detaile-list-nowPrice">
-                                <span class="newHot-product-detaile-list-nowPrice-txt">券后<b class="newHot-product-detaile-list-nowPrice-money">￥999.9</b></span>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="newHot-product-detaile-list-buy">
-                                购买
-                            </div>
-                        </div>
-                    </div>
-                    <!--佣金-->
-                    <div class="row">
-                        <div class="col-md-5" style="padding-right:0">
-                            <div class="product-commission">
-                                <span class="product-commission-txt">佣金</span>
-                                <b class="product-commission-money">￥299.9</b>
-                            </div>
-                        </div>
-                        <div class="col-md-7" style="padding: 0">
-                            <img src="img/icon_share.png" class="img-responsive product-commission-share" alt="">
-                        </div>
-                    </div>
-                    <!--hover时的二维码-->
-                    <p class="QC-model">
-                        <img src="img/downloadAPPQc.png" class="img-responsive" alt="">
-                    </p>
-                </div>
-            </div>
+                            <!--&lt;!&ndash;返显示&ndash;&gt;-->
+                            <!--<div class="newHot-product-detaile-list-tag newHot-product-detaile-list-tag-fan">-->
+                                <!--返￥100-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;券后价 购买按钮&ndash;&gt;-->
+                    <!--<div class="row newHot-product-detaile-list-nowPrice-container">-->
+                        <!--<div class="col-md-7">-->
+                            <!--<div class="newHot-product-detaile-list-nowPrice">-->
+                                <!--<span class="newHot-product-detaile-list-nowPrice-txt">券后<b class="newHot-product-detaile-list-nowPrice-money">￥999.9</b></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-5">-->
+                            <!--<div class="newHot-product-detaile-list-buy">-->
+                                <!--购买-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;佣金&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-5" style="padding-right:0">-->
+                            <!--<div class="product-commission">-->
+                                <!--<span class="product-commission-txt">佣金</span>-->
+                                <!--<b class="product-commission-money">￥299.9</b>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-7" style="padding: 0">-->
+                            <!--<img src="img/icon_share.png" class="img-responsive product-commission-share" alt="">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;hover时的二维码&ndash;&gt;-->
+                    <!--<p class="QC-model">-->
+                        <!--<img src="img/downloadAPPQc.png" class="img-responsive" alt="">-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
 
             <!--列表2-->
-            <div class="col-md-3">
-                <div class="newHot-product-detaile-list">
-                    <!--商品图片-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img src="http://img.alicdn.com/tfscom/i3/2452496434/TB1wxDxd29TBuNjy0FcXXbeiFXa_!!2-item_pic.png_240x240.jpg" alt="" class="img-responsive newHot-product-detaile-list-img" />
-                        </div>
-                    </div>
-                    <!--商品名称-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="newHot-product-detaile-list-name">
-                                索尼的的肯定是看看速度时代开始的开始的赛德克赛德克四度空间
-                            </div>
-                        </div>
-                    </div>
-                    <!--原价 券标志-->
-                    <div class="row">
-                        <!--原价-->
-                        <div class="col-md-7">
-                            <div class="newHot-product-detaile-list-price">
-                                <span class="newHot-product-detaile-list-price-txt">原价<s>￥999.00</s></span>
-                            </div>
-                        </div>
-                        <!--券标志-->
-                        <div class="col-md-5">
-                            <!--券显示-->
-                            <!--<div class="newHot-product-detaile-list-tag">-->
-                            <!--<img src="img/icon_ticket.png" class="img-responsive" alt="">-->
-                            <!--<span class="newHot-product-detaile-list-tag-txt">券￥10</span>-->
+            <!--<div class="col-md-3">-->
+                <!--<div class="newHot-product-detaile-list">-->
+                    <!--&lt;!&ndash;商品图片&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-12">-->
+                            <!--<img src="http://img.alicdn.com/tfscom/i3/2452496434/TB1wxDxd29TBuNjy0FcXXbeiFXa_!!2-item_pic.png_240x240.jpg" alt="" class="img-responsive newHot-product-detaile-list-img" />-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;商品名称&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-12">-->
+                            <!--<div class="newHot-product-detaile-list-name">-->
+                                <!--索尼的的肯定是看看速度时代开始的开始的赛德克赛德克四度空间-->
                             <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;原价 券标志&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--&lt;!&ndash;原价&ndash;&gt;-->
+                        <!--<div class="col-md-7">-->
+                            <!--<div class="newHot-product-detaile-list-price">-->
+                                <!--<span class="newHot-product-detaile-list-price-txt">原价<s>￥999.00</s></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash;券标志&ndash;&gt;-->
+                        <!--<div class="col-md-5">-->
+                            <!--&lt;!&ndash;券显示&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="newHot-product-detaile-list-tag">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<img src="img/icon_ticket.png" class="img-responsive" alt="">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<span class="newHot-product-detaile-list-tag-txt">券￥10</span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
 
-                            <!--返显示-->
-                            <div class="newHot-product-detaile-list-tag newHot-product-detaile-list-tag-fan">
-                                返￥100
-                            </div>
-                        </div>
-                    </div>
-                    <!--券后价 购买按钮-->
-                    <div class="row newHot-product-detaile-list-nowPrice-container">
-                        <div class="col-md-7">
-                            <div class="newHot-product-detaile-list-nowPrice">
-                                <span class="newHot-product-detaile-list-nowPrice-txt">券后<b class="newHot-product-detaile-list-nowPrice-money">￥999.9</b></span>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="newHot-product-detaile-list-buy">
-                                购买
-                            </div>
-                        </div>
-                    </div>
-                    <!--佣金-->
-                    <div class="row">
-                        <div class="col-md-5" style="padding-right:0">
-                            <div class="product-commission">
-                                <span class="product-commission-txt">佣金</span>
-                                <b class="product-commission-money">￥299.9</b>
-                            </div>
-                        </div>
-                        <div class="col-md-7" style="padding: 0">
-                            <img src="img/icon_share.png" class="img-responsive product-commission-share" alt="">
-                        </div>
-                    </div>
-                    <!--hover时的二维码-->
-                    <p class="QC-model">
-                        <img src="img/downloadAPPQc.png" class="img-responsive" alt="">
-                    </p>
-                </div>
-            </div>
+                            <!--&lt;!&ndash;返显示&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="newHot-product-detaile-list-tag newHot-product-detaile-list-tag-fan">&ndash;&gt;-->
+                                <!--&lt;!&ndash;返￥100&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                            <!--&lt;!&ndash;折&ndash;&gt;-->
+                            <!--<div class="newHot-product-detaile-list-tag newHot-product-detaile-list-tag-fan newHot-product-detaile-list-tag-zhe">-->
+                                <!--7&nbsp;折-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;券后价 购买按钮&ndash;&gt;-->
+                    <!--<div class="row newHot-product-detaile-list-nowPrice-container">-->
+                        <!--<div class="col-md-7">-->
+                            <!--<div class="newHot-product-detaile-list-nowPrice">-->
+                                <!--<span class="newHot-product-detaile-list-nowPrice-txt">券后<b class="newHot-product-detaile-list-nowPrice-money">￥999.9</b></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-5">-->
+                            <!--<div class="newHot-product-detaile-list-buy">-->
+                                <!--购买-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;佣金&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-5" style="padding-right:0">-->
+                            <!--<div class="product-commission">-->
+                                <!--<span class="product-commission-txt">佣金</span>-->
+                                <!--<b class="product-commission-money">￥299.9</b>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-7" style="padding: 0">-->
+                            <!--<img src="img/icon_share.png" class="img-responsive product-commission-share" alt="">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;hover时的二维码&ndash;&gt;-->
+                    <!--<p class="QC-model">-->
+                        <!--<img src="img/downloadAPPQc.png" class="img-responsive" alt="">-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
 
             <!--列表3-->
-            <div class="col-md-3">
-                <div class="newHot-product-detaile-list">
-                    <!--商品图片-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img src="http://img.alicdn.com/tfscom/i3/2452496434/TB1wxDxd29TBuNjy0FcXXbeiFXa_!!2-item_pic.png_240x240.jpg" alt="" class="img-responsive newHot-product-detaile-list-img" />
-                        </div>
-                    </div>
-                    <!--商品名称-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="newHot-product-detaile-list-name">
-                                索尼的的肯定是看看速度时代开始的开始的赛德克赛德克四度空间
-                            </div>
-                        </div>
-                    </div>
-                    <!--原价 券标志-->
-                    <div class="row">
-                        <!--原价-->
-                        <div class="col-md-7">
-                            <div class="newHot-product-detaile-list-price">
-                                <span class="newHot-product-detaile-list-price-txt">原价<s>￥999.00</s></span>
-                            </div>
-                        </div>
-                        <!--券标志-->
-                        <div class="col-md-5">
-                            <!--券显示-->
-                            <!--<div class="newHot-product-detaile-list-tag">-->
-                            <!--<img src="img/icon_ticket.png" class="img-responsive" alt="">-->
-                            <!--<span class="newHot-product-detaile-list-tag-txt">券￥10</span>-->
+            <!--<div class="col-md-3">-->
+                <!--<div class="newHot-product-detaile-list">-->
+                    <!--&lt;!&ndash;商品图片&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-12">-->
+                            <!--<img src="http://img.alicdn.com/tfscom/i3/2452496434/TB1wxDxd29TBuNjy0FcXXbeiFXa_!!2-item_pic.png_240x240.jpg" alt="" class="img-responsive newHot-product-detaile-list-img" />-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;商品名称&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-12">-->
+                            <!--<div class="newHot-product-detaile-list-name">-->
+                                <!--索尼的的肯定是看看速度时代开始的开始的赛德克赛德克四度空间-->
                             <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;原价 券标志&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--&lt;!&ndash;原价&ndash;&gt;-->
+                        <!--<div class="col-md-7">-->
+                            <!--<div class="newHot-product-detaile-list-price">-->
+                                <!--<span class="newHot-product-detaile-list-price-txt">原价<s>￥999.00</s></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash;券标志&ndash;&gt;-->
+                        <!--<div class="col-md-5">-->
+                            <!--&lt;!&ndash;券显示&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="newHot-product-detaile-list-tag">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<img src="img/icon_ticket.png" class="img-responsive" alt="">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<span class="newHot-product-detaile-list-tag-txt">券￥10</span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
 
-                            <!--返显示-->
-                            <div class="newHot-product-detaile-list-tag newHot-product-detaile-list-tag-fan">
-                                返￥100
-                            </div>
-                        </div>
-                    </div>
-                    <!--券后价 购买按钮-->
-                    <div class="row newHot-product-detaile-list-nowPrice-container">
-                        <div class="col-md-7">
-                            <div class="newHot-product-detaile-list-nowPrice">
-                                <span class="newHot-product-detaile-list-nowPrice-txt">券后<b class="newHot-product-detaile-list-nowPrice-money">￥999.9</b></span>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="newHot-product-detaile-list-buy">
-                                购买
-                            </div>
-                        </div>
-                    </div>
-                    <!--佣金-->
-                    <div class="row">
-                        <div class="col-md-5" style="padding-right:0">
-                            <div class="product-commission">
-                                <span class="product-commission-txt">佣金</span>
-                                <b class="product-commission-money">￥299.9</b>
-                            </div>
-                        </div>
-                        <div class="col-md-7" style="padding: 0">
-                            <img src="img/icon_share.png" class="img-responsive product-commission-share" alt="">
-                        </div>
-                    </div>
-                    <!--hover时的二维码-->
-                    <p class="QC-model">
-                        <img src="img/downloadAPPQc.png" class="img-responsive" alt="">
-                    </p>
-                </div>
-            </div>
+                            <!--&lt;!&ndash;返显示&ndash;&gt;-->
+                            <!--<div class="newHot-product-detaile-list-tag newHot-product-detaile-list-tag-fan">-->
+                                <!--返￥100-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;券后价 购买按钮&ndash;&gt;-->
+                    <!--<div class="row newHot-product-detaile-list-nowPrice-container">-->
+                        <!--<div class="col-md-7">-->
+                            <!--<div class="newHot-product-detaile-list-nowPrice">-->
+                                <!--<span class="newHot-product-detaile-list-nowPrice-txt">券后<b class="newHot-product-detaile-list-nowPrice-money">￥999.9</b></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-5">-->
+                            <!--<div class="newHot-product-detaile-list-buy">-->
+                                <!--购买-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;佣金&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-5" style="padding-right:0">-->
+                            <!--<div class="product-commission">-->
+                                <!--<span class="product-commission-txt">佣金</span>-->
+                                <!--<b class="product-commission-money">￥299.9</b>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-7" style="padding: 0">-->
+                            <!--<img src="img/icon_share.png" class="img-responsive product-commission-share" alt="">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;hover时的二维码&ndash;&gt;-->
+                    <!--<p class="QC-model">-->
+                        <!--<img src="img/downloadAPPQc.png" class="img-responsive" alt="">-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
 
             <!--列表4-->
-            <div class="col-md-3">
-                <div class="newHot-product-detaile-list">
-                    <!--商品图片-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img src="http://img.alicdn.com/tfscom/i3/2452496434/TB1wxDxd29TBuNjy0FcXXbeiFXa_!!2-item_pic.png_240x240.jpg" alt="" class="img-responsive newHot-product-detaile-list-img" />
-                        </div>
-                    </div>
-                    <!--商品名称-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="newHot-product-detaile-list-name">
-                                索尼的的肯定是看看速度时代开始的开始的赛德克赛德克四度空间
-                            </div>
-                        </div>
-                    </div>
-                    <!--原价 券标志-->
-                    <div class="row">
-                        <!--原价-->
-                        <div class="col-md-7">
-                            <div class="newHot-product-detaile-list-price">
-                                <span class="newHot-product-detaile-list-price-txt">原价<s>￥999.00</s></span>
-                            </div>
-                        </div>
-                        <!--券标志-->
-                        <div class="col-md-5">
-                            <!--券显示-->
-                            <!--<div class="newHot-product-detaile-list-tag">-->
-                            <!--<img src="img/icon_ticket.png" class="img-responsive" alt="">-->
-                            <!--<span class="newHot-product-detaile-list-tag-txt">券￥10</span>-->
+            <!--<div class="col-md-3">-->
+                <!--<div class="newHot-product-detaile-list">-->
+                    <!--&lt;!&ndash;商品图片&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-12">-->
+                            <!--<img src="http://img.alicdn.com/tfscom/i3/2452496434/TB1wxDxd29TBuNjy0FcXXbeiFXa_!!2-item_pic.png_240x240.jpg" alt="" class="img-responsive newHot-product-detaile-list-img" />-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;商品名称&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-12">-->
+                            <!--<div class="newHot-product-detaile-list-name">-->
+                                <!--索尼的的肯定是看看速度时代开始的开始的赛德克赛德克四度空间-->
                             <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;原价 券标志&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--&lt;!&ndash;原价&ndash;&gt;-->
+                        <!--<div class="col-md-7">-->
+                            <!--<div class="newHot-product-detaile-list-price">-->
+                                <!--<span class="newHot-product-detaile-list-price-txt">原价<s>￥999.00</s></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash;券标志&ndash;&gt;-->
+                        <!--<div class="col-md-5">-->
+                            <!--&lt;!&ndash;券显示&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="newHot-product-detaile-list-tag">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<img src="img/icon_ticket.png" class="img-responsive" alt="">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<span class="newHot-product-detaile-list-tag-txt">券￥10</span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
 
-                            <!--返显示-->
-                            <div class="newHot-product-detaile-list-tag newHot-product-detaile-list-tag-fan">
-                                返￥100
-                            </div>
-                        </div>
-                    </div>
-                    <!--券后价 购买按钮-->
-                    <div class="row newHot-product-detaile-list-nowPrice-container">
-                        <div class="col-md-7">
-                            <div class="newHot-product-detaile-list-nowPrice">
-                                <span class="newHot-product-detaile-list-nowPrice-txt">券后<b class="newHot-product-detaile-list-nowPrice-money">￥999.9</b></span>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="newHot-product-detaile-list-buy">
-                                购买
-                            </div>
-                        </div>
-                    </div>
-                    <!--佣金-->
-                    <div class="row">
-                        <div class="col-md-5" style="padding-right:0">
-                            <div class="product-commission">
-                                <span class="product-commission-txt">佣金</span>
-                                <b class="product-commission-money">￥299.9</b>
-                            </div>
-                        </div>
-                        <div class="col-md-7" style="padding: 0">
-                            <img src="img/icon_share.png" class="img-responsive product-commission-share" alt="">
-                        </div>
-                    </div>
-                    <!--hover时的二维码-->
-                    <p class="QC-model">
-                        <img src="img/downloadAPPQc.png" class="img-responsive" alt="">
-                    </p>
-                </div>
-            </div>
+                            <!--&lt;!&ndash;返显示&ndash;&gt;-->
+                            <!--<div class="newHot-product-detaile-list-tag newHot-product-detaile-list-tag-fan">-->
+                                <!--返￥100-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;券后价 购买按钮&ndash;&gt;-->
+                    <!--<div class="row newHot-product-detaile-list-nowPrice-container">-->
+                        <!--<div class="col-md-7">-->
+                            <!--<div class="newHot-product-detaile-list-nowPrice">-->
+                                <!--<span class="newHot-product-detaile-list-nowPrice-txt">券后<b class="newHot-product-detaile-list-nowPrice-money">￥999.9</b></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-5">-->
+                            <!--<div class="newHot-product-detaile-list-buy">-->
+                                <!--购买-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;佣金&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-5" style="padding-right:0">-->
+                            <!--<div class="product-commission">-->
+                                <!--<span class="product-commission-txt">佣金</span>-->
+                                <!--<b class="product-commission-money">￥299.9</b>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-7" style="padding: 0">-->
+                            <!--<img src="img/icon_share.png" class="img-responsive product-commission-share" alt="">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;hover时的二维码&ndash;&gt;-->
+                    <!--<p class="QC-model">-->
+                        <!--<img src="img/downloadAPPQc.png" class="img-responsive" alt="">-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
 
             <!--列表5-->
-            <div class="col-md-3">
-                <div class="newHot-product-detaile-list">
-                    <!--商品图片-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img src="http://img.alicdn.com/tfscom/i3/2452496434/TB1wxDxd29TBuNjy0FcXXbeiFXa_!!2-item_pic.png_240x240.jpg" alt="" class="img-responsive newHot-product-detaile-list-img" />
-                        </div>
-                    </div>
-                    <!--商品名称-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="newHot-product-detaile-list-name">
-                                索尼的的肯定是看看速度时代开始的开始的赛德克赛德克四度空间
-                            </div>
-                        </div>
-                    </div>
-                    <!--原价 券标志-->
-                    <div class="row">
-                        <!--原价-->
-                        <div class="col-md-7">
-                            <div class="newHot-product-detaile-list-price">
-                                <span class="newHot-product-detaile-list-price-txt">原价<s>￥999.00</s></span>
-                            </div>
-                        </div>
-                        <!--券标志-->
-                        <div class="col-md-5">
-                            <!--券显示-->
-                            <!--<div class="newHot-product-detaile-list-tag">-->
-                            <!--<img src="img/icon_ticket.png" class="img-responsive" alt="">-->
-                            <!--<span class="newHot-product-detaile-list-tag-txt">券￥10</span>-->
+            <!--<div class="col-md-3">-->
+                <!--<div class="newHot-product-detaile-list">-->
+                    <!--&lt;!&ndash;商品图片&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-12">-->
+                            <!--<img src="http://img.alicdn.com/tfscom/i3/2452496434/TB1wxDxd29TBuNjy0FcXXbeiFXa_!!2-item_pic.png_240x240.jpg" alt="" class="img-responsive newHot-product-detaile-list-img" />-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;商品名称&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-12">-->
+                            <!--<div class="newHot-product-detaile-list-name">-->
+                                <!--索尼的的肯定是看看速度时代开始的开始的赛德克赛德克四度空间-->
                             <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;原价 券标志&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--&lt;!&ndash;原价&ndash;&gt;-->
+                        <!--<div class="col-md-7">-->
+                            <!--<div class="newHot-product-detaile-list-price">-->
+                                <!--<span class="newHot-product-detaile-list-price-txt">原价<s>￥999.00</s></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash;券标志&ndash;&gt;-->
+                        <!--<div class="col-md-5">-->
+                            <!--&lt;!&ndash;券显示&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="newHot-product-detaile-list-tag">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<img src="img/icon_ticket.png" class="img-responsive" alt="">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<span class="newHot-product-detaile-list-tag-txt">券￥10</span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
 
-                            <!--返显示-->
-                            <div class="newHot-product-detaile-list-tag newHot-product-detaile-list-tag-fan">
-                                返￥100
-                            </div>
-                        </div>
-                    </div>
-                    <!--券后价 购买按钮-->
-                    <div class="row newHot-product-detaile-list-nowPrice-container">
-                        <div class="col-md-7">
-                            <div class="newHot-product-detaile-list-nowPrice">
-                                <span class="newHot-product-detaile-list-nowPrice-txt">券后<b class="newHot-product-detaile-list-nowPrice-money">￥999.9</b></span>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="newHot-product-detaile-list-buy">
-                                购买
-                            </div>
-                        </div>
-                    </div>
-                    <!--佣金-->
-                    <div class="row">
-                        <div class="col-md-5" style="padding-right:0">
-                            <div class="product-commission">
-                                <span class="product-commission-txt">佣金</span>
-                                <b class="product-commission-money">￥299.9</b>
-                            </div>
-                        </div>
-                        <div class="col-md-7" style="padding: 0">
-                            <img src="img/icon_share.png" class="img-responsive product-commission-share" alt="">
-                        </div>
-                    </div>
-                    <!--hover时的二维码-->
-                    <p class="QC-model">
-                        <img src="img/downloadAPPQc.png" class="img-responsive" alt="">
-                    </p>
-                </div>
-            </div>
+                            <!--&lt;!&ndash;返显示&ndash;&gt;-->
+                            <!--<div class="newHot-product-detaile-list-tag newHot-product-detaile-list-tag-fan">-->
+                                <!--返￥100-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;券后价 购买按钮&ndash;&gt;-->
+                    <!--<div class="row newHot-product-detaile-list-nowPrice-container">-->
+                        <!--<div class="col-md-7">-->
+                            <!--<div class="newHot-product-detaile-list-nowPrice">-->
+                                <!--<span class="newHot-product-detaile-list-nowPrice-txt">券后<b class="newHot-product-detaile-list-nowPrice-money">￥999.9</b></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-5">-->
+                            <!--<div class="newHot-product-detaile-list-buy">-->
+                                <!--购买-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;佣金&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-5" style="padding-right:0">-->
+                            <!--<div class="product-commission">-->
+                                <!--<span class="product-commission-txt">佣金</span>-->
+                                <!--<b class="product-commission-money">￥299.9</b>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-7" style="padding: 0">-->
+                            <!--<img src="img/icon_share.png" class="img-responsive product-commission-share" alt="">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;hover时的二维码&ndash;&gt;-->
+                    <!--<p class="QC-model">-->
+                        <!--<img src="img/downloadAPPQc.png" class="img-responsive" alt="">-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
 
             <!--列表6-->
-            <div class="col-md-3">
-                <div class="newHot-product-detaile-list">
-                    <!--商品图片-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img src="http://img.alicdn.com/tfscom/i3/2452496434/TB1wxDxd29TBuNjy0FcXXbeiFXa_!!2-item_pic.png_240x240.jpg" alt="" class="img-responsive newHot-product-detaile-list-img" />
-                        </div>
-                    </div>
-                    <!--商品名称-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="newHot-product-detaile-list-name">
-                                索尼的的肯定是看看速度时代开始的开始的赛德克赛德克四度空间
-                            </div>
-                        </div>
-                    </div>
-                    <!--原价 券标志-->
-                    <div class="row">
-                        <!--原价-->
-                        <div class="col-md-7">
-                            <div class="newHot-product-detaile-list-price">
-                                <span class="newHot-product-detaile-list-price-txt">原价<s>￥999.00</s></span>
-                            </div>
-                        </div>
-                        <!--券标志-->
-                        <div class="col-md-5">
-                            <!--券显示-->
-                            <!--<div class="newHot-product-detaile-list-tag">-->
-                            <!--<img src="img/icon_ticket.png" class="img-responsive" alt="">-->
-                            <!--<span class="newHot-product-detaile-list-tag-txt">券￥10</span>-->
+            <!--<div class="col-md-3">-->
+                <!--<div class="newHot-product-detaile-list">-->
+                    <!--&lt;!&ndash;商品图片&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-12">-->
+                            <!--<img src="http://img.alicdn.com/tfscom/i3/2452496434/TB1wxDxd29TBuNjy0FcXXbeiFXa_!!2-item_pic.png_240x240.jpg" alt="" class="img-responsive newHot-product-detaile-list-img" />-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;商品名称&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-12">-->
+                            <!--<div class="newHot-product-detaile-list-name">-->
+                                <!--索尼的的肯定是看看速度时代开始的开始的赛德克赛德克四度空间-->
                             <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;原价 券标志&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--&lt;!&ndash;原价&ndash;&gt;-->
+                        <!--<div class="col-md-7">-->
+                            <!--<div class="newHot-product-detaile-list-price">-->
+                                <!--<span class="newHot-product-detaile-list-price-txt">原价<s>￥999.00</s></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash;券标志&ndash;&gt;-->
+                        <!--<div class="col-md-5">-->
+                            <!--&lt;!&ndash;券显示&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="newHot-product-detaile-list-tag">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<img src="img/icon_ticket.png" class="img-responsive" alt="">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<span class="newHot-product-detaile-list-tag-txt">券￥10</span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
 
-                            <!--返显示-->
-                            <div class="newHot-product-detaile-list-tag newHot-product-detaile-list-tag-fan">
-                                返￥100
-                            </div>
-                        </div>
-                    </div>
-                    <!--券后价 购买按钮-->
-                    <div class="row newHot-product-detaile-list-nowPrice-container">
-                        <div class="col-md-7">
-                            <div class="newHot-product-detaile-list-nowPrice">
-                                <span class="newHot-product-detaile-list-nowPrice-txt">券后<b class="newHot-product-detaile-list-nowPrice-money">￥999.9</b></span>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="newHot-product-detaile-list-buy">
-                                购买
-                            </div>
-                        </div>
-                    </div>
-                    <!--佣金-->
-                    <div class="row">
-                        <div class="col-md-5" style="padding-right:0">
-                            <div class="product-commission">
-                                <span class="product-commission-txt">佣金</span>
-                                <b class="product-commission-money">￥299.9</b>
-                            </div>
-                        </div>
-                        <div class="col-md-7" style="padding: 0">
-                            <img src="img/icon_share.png" class="img-responsive product-commission-share" alt="">
-                        </div>
-                    </div>
-                    <!--hover时的二维码-->
-                    <p class="QC-model">
-                        <img src="img/downloadAPPQc.png" class="img-responsive" alt="">
-                    </p>
-                </div>
-            </div>
+                            <!--&lt;!&ndash;返显示&ndash;&gt;-->
+                            <!--<div class="newHot-product-detaile-list-tag newHot-product-detaile-list-tag-fan">-->
+                                <!--返￥100-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;券后价 购买按钮&ndash;&gt;-->
+                    <!--<div class="row newHot-product-detaile-list-nowPrice-container">-->
+                        <!--<div class="col-md-7">-->
+                            <!--<div class="newHot-product-detaile-list-nowPrice">-->
+                                <!--<span class="newHot-product-detaile-list-nowPrice-txt">券后<b class="newHot-product-detaile-list-nowPrice-money">￥999.9</b></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-5">-->
+                            <!--<div class="newHot-product-detaile-list-buy">-->
+                                <!--购买-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;佣金&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-5" style="padding-right:0">-->
+                            <!--<div class="product-commission">-->
+                                <!--<span class="product-commission-txt">佣金</span>-->
+                                <!--<b class="product-commission-money">￥299.9</b>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-7" style="padding: 0">-->
+                            <!--<img src="img/icon_share.png" class="img-responsive product-commission-share" alt="">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;hover时的二维码&ndash;&gt;-->
+                    <!--<p class="QC-model">-->
+                        <!--<img src="img/downloadAPPQc.png" class="img-responsive" alt="">-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
 
             <!--列表7-->
-            <div class="col-md-3">
-                <div class="newHot-product-detaile-list">
-                    <!--商品图片-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img src="http://img.alicdn.com/tfscom/i3/2452496434/TB1wxDxd29TBuNjy0FcXXbeiFXa_!!2-item_pic.png_240x240.jpg" alt="" class="img-responsive newHot-product-detaile-list-img" />
-                        </div>
-                    </div>
-                    <!--商品名称-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="newHot-product-detaile-list-name">
-                                索尼的的肯定是看看速度时代开始的开始的赛德克赛德克四度空间
-                            </div>
-                        </div>
-                    </div>
-                    <!--原价 券标志-->
-                    <div class="row">
-                        <!--原价-->
-                        <div class="col-md-7">
-                            <div class="newHot-product-detaile-list-price">
-                                <span class="newHot-product-detaile-list-price-txt">原价<s>￥999.00</s></span>
-                            </div>
-                        </div>
-                        <!--券标志-->
-                        <div class="col-md-5">
-                            <!--券显示-->
-                            <!--<div class="newHot-product-detaile-list-tag">-->
-                            <!--<img src="img/icon_ticket.png" class="img-responsive" alt="">-->
-                            <!--<span class="newHot-product-detaile-list-tag-txt">券￥10</span>-->
+            <!--<div class="col-md-3">-->
+                <!--<div class="newHot-product-detaile-list">-->
+                    <!--&lt;!&ndash;商品图片&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-12">-->
+                            <!--<img src="http://img.alicdn.com/tfscom/i3/2452496434/TB1wxDxd29TBuNjy0FcXXbeiFXa_!!2-item_pic.png_240x240.jpg" alt="" class="img-responsive newHot-product-detaile-list-img" />-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;商品名称&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-12">-->
+                            <!--<div class="newHot-product-detaile-list-name">-->
+                                <!--索尼的的肯定是看看速度时代开始的开始的赛德克赛德克四度空间-->
                             <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;原价 券标志&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--&lt;!&ndash;原价&ndash;&gt;-->
+                        <!--<div class="col-md-7">-->
+                            <!--<div class="newHot-product-detaile-list-price">-->
+                                <!--<span class="newHot-product-detaile-list-price-txt">原价<s>￥999.00</s></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash;券标志&ndash;&gt;-->
+                        <!--<div class="col-md-5">-->
+                            <!--&lt;!&ndash;券显示&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="newHot-product-detaile-list-tag">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<img src="img/icon_ticket.png" class="img-responsive" alt="">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<span class="newHot-product-detaile-list-tag-txt">券￥10</span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
 
-                            <!--返显示-->
-                            <div class="newHot-product-detaile-list-tag newHot-product-detaile-list-tag-fan">
-                                返￥100
-                            </div>
-                        </div>
-                    </div>
-                    <!--券后价 购买按钮-->
-                    <div class="row newHot-product-detaile-list-nowPrice-container">
-                        <div class="col-md-7">
-                            <div class="newHot-product-detaile-list-nowPrice">
-                                <span class="newHot-product-detaile-list-nowPrice-txt">券后<b class="newHot-product-detaile-list-nowPrice-money">￥999.9</b></span>
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="newHot-product-detaile-list-buy">
-                                购买
-                            </div>
-                        </div>
-                    </div>
-                    <!--佣金-->
-                    <div class="row">
-                        <div class="col-md-5" style="padding-right:0">
-                            <div class="product-commission">
-                                <span class="product-commission-txt">佣金</span>
-                                <b class="product-commission-money">￥299.9</b>
-                            </div>
-                        </div>
-                        <div class="col-md-7" style="padding: 0">
-                            <img src="img/icon_share.png" class="img-responsive product-commission-share" alt="">
-                        </div>
-                    </div>
-                    <!--hover时的二维码-->
-                    <p class="QC-model">
-                        <img src="img/downloadAPPQc.png" class="img-responsive" alt="">
-                    </p>
-                </div>
-            </div>
+                            <!--&lt;!&ndash;返显示&ndash;&gt;-->
+                            <!--<div class="newHot-product-detaile-list-tag newHot-product-detaile-list-tag-fan">-->
+                                <!--返￥100-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;券后价 购买按钮&ndash;&gt;-->
+                    <!--<div class="row newHot-product-detaile-list-nowPrice-container">-->
+                        <!--<div class="col-md-7">-->
+                            <!--<div class="newHot-product-detaile-list-nowPrice">-->
+                                <!--<span class="newHot-product-detaile-list-nowPrice-txt">券后<b class="newHot-product-detaile-list-nowPrice-money">￥999.9</b></span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-5">-->
+                            <!--<div class="newHot-product-detaile-list-buy">-->
+                                <!--购买-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;佣金&ndash;&gt;-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-5" style="padding-right:0">-->
+                            <!--<div class="product-commission">-->
+                                <!--<span class="product-commission-txt">佣金</span>-->
+                                <!--<b class="product-commission-money">￥299.9</b>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-7" style="padding: 0">-->
+                            <!--<img src="img/icon_share.png" class="img-responsive product-commission-share" alt="">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;hover时的二维码&ndash;&gt;-->
+                    <!--<p class="QC-model">-->
+                        <!--<img src="img/downloadAPPQc.png" class="img-responsive" alt="">-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
 
             <!--最后的下载APP提示-->
-            <div class="col-md-3">
+            <div class="col-md-3" style="display: none">
                 <div class="newHot-product-detaile-list" style="box-shadow: 0 0 8px 0 rgba(0,0,0,0.08);padding-bottom:17px;">
                     <img src="img/productShowQC.png" alt="" class="img-responsive"/>
                 </div>
             </div>
+        </div>
+        <!--加载动画-->
+        <div class="donghua" style="width:100%;height: 100px;text-align: center;position: relative;margin-bottom:20px;">
+            <div id="targetr" style="display: inline-block;vertical-align: middle;margin-right: 3rem"></div>
+            <div  class="wenzi" style="display: inline-block;font-size: 3rem;padding-top: 4.5rem;margin-left: 3rem;color: #cacaca;">正在加载中</div>
         </div>
     </div>
     <!--底部水印-->
@@ -645,6 +656,8 @@
 <!--<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>-->
 <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 <!--<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+<!--加载圆圈-->
+<script src="js/utils/spin.min.js" type="text/javascript" charset="utf-8"></script>
 <script>
 
 

@@ -26,15 +26,23 @@ a:hover, a:visited, a:link, a:active {
     line-height: 80px;
     margin:10px auto 0 auto;
 }
-.nav-title .click{
+#mynavbars .click{
     color:#da2f25;
     font-size:16px;
     font-family: pingFangSc-Medium;
 }
+#mynavbars a{
+    color:#666;
+    font-size:16px;
+}
+#mynavbars a:hover{
+     color:#da2f25;
+     font-size:16px;
+ }
 #homePage{
     position: relative;
-    margin-top:90px;
-    width:100%;
+    margin-top:60px;
+    /*width:100%;*/
     background: #da2f25;
     /*background: url(../img/banner.png) no-repeat;*/
     /*background-size: 100%;*/
@@ -45,18 +53,18 @@ a:hover, a:visited, a:link, a:active {
 }
 .qrCode{
     width:9%;
-    bottom:4%;
-    left:18.5%;
+    bottom:6%;
+    left:20%;
 }
 .iosDownload{
     width:11%;
     bottom:29%;
-    left:30.3%;
+    left:31.3%;
 }
 .androidDownload{
     width:11%;
     bottom:10.5%;
-    left:30.3%;
+    left:31.3%;
 }
 .guanzhugongzhonghao{
     bottom:8%;
@@ -111,6 +119,8 @@ a:hover, a:visited, a:link, a:active {
     border-radius: 0 6px 6px 0;
     height:52px;
     line-height: 52px;
+    position: relative;
+    left:1px;
 }
 /*最新推荐*/
 .newHot-product{
@@ -122,18 +132,20 @@ a:hover, a:visited, a:link, a:active {
     letter-spacing: 1px;
 }
 .newHot-product-detaile{
-    margin-bottom:100px;
+    /*margin-bottom:50px;*/
 }
 .newHot-product-detaile-list{
-    width:75%;
+    width:90%;
+    height:410px;
     margin:0 auto 60px auto;
     position: relative;
     box-shadow:0 4px 8px 0 rgba(0,0,0,0.04);
     border-radius:8px;
-    padding-bottom:20px;
 }
 .newHot-product-detaile-list-img{
     border-radius:8px 8px 0 0;
+    width:240px;
+    height:235px;
 }
 .newHot-product-detaile-list-name{
     overflow : hidden;
@@ -163,12 +175,11 @@ a:hover, a:visited, a:link, a:active {
 }
 .newHot-product-detaile-list-tag-txt{
     color:#fff;
-    font-size:12px;
+    font-size:14px;
     position: absolute;
-    top:2px;
-    left:14px;
+    top:4px;
+    left:22px;
     display: inline-block;
-    width:90%;
     margin: 0 auto;
 }
 .newHot-product-detaile-list-tag-fan{
@@ -177,20 +188,23 @@ a:hover, a:visited, a:link, a:active {
     font-size:12px;
     text-align: center;
     border-radius:3px;
-    height:22px;
-    line-height: 22px;
+    height:25px;
+    line-height: 25px;
+}
+.newHot-product-detaile-list-tag-zhe{
+    background:linear-gradient(90deg,#c028f0 0%,#fa44e6 100%);
 }
 .newHot-product-detaile-list-buy{
     color:#fff;
-    font-size:12px ;
+    font-size:14px ;
     background:#da2f25;
     border-radius: 3px;
     text-align: center;
     position:relative;
     right:8%;
     top:4px;
-    height:22px;
-    line-height:22px;
+    height:25px;
+    line-height:25px;
 }
 .newHot-product-detaile-list-nowPrice{
     width: 100%;
@@ -208,6 +222,11 @@ a:hover, a:visited, a:link, a:active {
     font-size:22px;
     font-weight: 500;
     vertical-align: middle;
+    display: inline-block;
+    width:80%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    whitewhite-space: nowrap;
 }
 .product-commission{
     border:1px solid #d79d36;
@@ -515,8 +534,8 @@ a:hover, a:visited, a:link, a:active {
 /*侧边二维码*/
 .downLoad-app-QC{
     position: fixed;
-    top:677px;
-    right:13%;
+    top:694px;
+    right:20%;
     z-index: 2;
 }
 /**************文字搜索页textSearch.html****************************/
@@ -544,7 +563,7 @@ a:hover, a:visited, a:link, a:active {
 .resultCategory{
     text-align:center;
     border-bottom:1px solid #da2f25;
-    margin:80px 30px 30px 30px;
+    margin:80px 30px 30px 15px;
 }
 .resultCategory .resultCategory-column{
     padding:0;
