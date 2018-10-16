@@ -24,6 +24,16 @@ $(function(){
             alert("请您填写搜索词")
         }
     });
+    //触发键盘事件
+    $(document).keydown(function(event){
+        if(event.keyCode == 13) {
+            val=$(".txt-search").val();
+            $(".newHot-product-detaile").empty();
+            pageId=1;
+            groupSearchText();
+            return false;//阻止回车之后的页面刷新而使得搜索的事件读不到
+        }
+    });
    // 初始进入的搜索词
    val=GetQueryString("val");
     $(".clear-txt-bg").show();
@@ -186,7 +196,8 @@ $(function(){
                     pageId = result.data.pageId;
                     pageId++;
                 }else{
-
+                    $(".newHot-product-detaile").html('<img src="img/txtSearchNodata.png" class="img-responsive" style="margin:200px auto 200px auto">');
+                    spinnerHide();
                 }
             },
             complete: function() {
@@ -250,11 +261,4 @@ $(function(){
         })
     }
     start();
-
-
-
-
-
-
-
 })

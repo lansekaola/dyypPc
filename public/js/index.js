@@ -243,13 +243,24 @@ $(function(){
         $(this).children("div").children("div").css({"color":"#666"});
     });
     // 文字搜索
+   function txtSearch() {
+       var val=$(".txt-search").val();
+       if(val!=""){
+           location.href="textSearch.html?val="+val;
+       }else{
+           alert("请您填写搜索词")
+       }
+   }
     $(".txt-search-btn").on("click",function(){
-        var val=$(".txt-search").val();
-        if(val!=""){
-            location.href="textSearch.html?val="+val;
-        }else{
-            alert("请您填写搜索词")
-        }
+        txtSearch();
+    });
+    //触发键盘事件
+    $(document).keydown(function(event){
+        if(event.keyCode == 13) {
+            txtSearch();
+            return false;//阻止回车之后的页面刷新而使得搜索的事件读不到
+        };
+
     });
     //接收文字搜索和图片搜索页面tab返回的标志跳转到相应页面
     var tag=GetQueryString("tag");
